@@ -1,0 +1,61 @@
+/*
+Main = #8bc348
+Primary = #AEDD94
+Text = #444444
+ */
+
+/* 
+<---------------->
+| NAVBAR SECTION |
+<---------------->
+*/
+
+/* navbar*/
+.nav-style {
+    background-color: #8bc348;
+}
+
+/*Fix the navbtn margin*/
+@media screen and (max-width:600px){
+    .navBtn i{
+        margin-top: 1rem;
+    }
+}
+/*Farm logo custom */
+#farm-logo{
+    margin-top: 1em;
+    padding-bottom: 0em;
+}
+
+/*!!! sideNav  header !!!*/
+
+/* fix header size */
+#nav-side h4{
+    margin-top: -0.5em !important;
+    color: #8bc348;
+}
+/* disable Header cover & active effect */
+.header li:hover,
+.header li:active{
+    background-color: white !important;
+}
+
+
+/*!!! sideNav  Item !!!*/
+
+/* Navbar text color fix */
+.side-nav a{
+    color:#8bc348 !important;
+    text-align: center;
+}
+.side-nav a:hover{
+    color: white !important;
+    
+}
+
+/* Nav item fix cover and active fx */
+.side-nav li.active,.side-nav li:hover{
+
+    background-color: #AEDD94 ;
+    
+}
