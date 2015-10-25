@@ -877,3 +877,10 @@
 .c100.orange.dark:hover > span {
   color: #e08833;
 }
+/* custom css */
+.c100.cir-red .bar, .c100.cir-red .fill {
+  border-color: #ff0045 !important;
+}
+.c100.cir-red:hover > span {
+  color: #ff0045;
+}
