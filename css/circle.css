@@ -884,3 +884,11 @@
 .c100.cir-red:hover > span {
   color: #ff0045;
 }
+/*blue */
+
+.c100.cir-blue .bar, .c100.cir-blue .fill {
+  border-color: #2196f3 !important;
+}
+.c100.cir-blue:hover > span {
+  color: #2196f3;
+}
