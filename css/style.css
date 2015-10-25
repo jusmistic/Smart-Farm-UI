@@ -4,6 +4,17 @@ Primary = #AEDD94
 Text = #444444
  */
 
+/* Main Color */
+.text-main{
+    color: #8bc348 !important;
+}
+.text-primary{
+    color: #AEDD94 !important;
+}
+.text-normal{
+    color: #444444 !important;
+}
+
 /* 
 <---------------->
 | NAVBAR SECTION |
@@ -55,7 +66,5 @@ Text = #444444
 
 /* Nav item fix cover and active fx */
 .side-nav li.active,.side-nav li:hover{
-
     background-color: #AEDD94 ;
-    
 }
