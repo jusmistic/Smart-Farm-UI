@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Smart Farm</title>
+    </head>
+    <body>
+        <!-- Navbar Start here -->
+          <nav class="nav-style">
+            <div class="nav-wrapper container nav-style">
+              <a href="#!" class="brand-logo">Smart Farm</a>
+              <a href="#" data-activates="nav-side" class="navBtn right"><i class="material-icons">menu</i></a>
+                <ul class="side-nav" id="nav-side">
+                    <!-- Header -->
+                    <header class="header">
+                        <li><img class="responsive-img " id="farm-logo" src="img/TaeyeonEvil.jpg"></li>
+                        <li><h4 class="center ">Smart Farm</h4></li>
+                        <hr width="190" >
+                    </header>
+                    <!-- Menu Item -->
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Farm List</a></li>
+                        <li><a href="#">Statistics</a></li>    
+                        <li><a href="#">Setting</a></li> 
+                        <li><a href="#">About</a></li> 
+                </ul>
+            </div>
+          </nav>
+     
+        
+        
+        
+        <!-- Content Section -->
+        <div class="container">
+           <img class="responsive-img center" src="img/s.jpg">
+            <h4>Farm 1</h4>
+            <p>Mode:</p>
+            <form action="#" class="row row-fix">
+                <p class="col s6 m12 l12">
+                  <input name="control_set" type="radio" id="Manual"  class="Manual" checked/>
+                  <label for="Manual" class="Manual">Manual</label>
+                </p>
+                <p class="col s6">
+                  <input name="control_set" type="radio" id="Auto" class="Auto"/>
+                  <label for="Auto" class="Manual">Auto</label>
+                </p>
+            </form>
+            
+            <div id="auto-setting">
+                <p>Holler</p>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- Script Section -->
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <script type="application/javascript" src="js/materialize.min.js"></script>
+        <script>
+        $(document).ready(function () {
+            
+            $('.navBtn').sideNav();
+            $('.Manual').click(function(){
+                $('#auto-setting').hide();
+                
+            });
+            $('.Auto').click(function(){
+                $('#auto-setting').show();
+                
+            });
+        });
+        
+        </script>
+    </body>
+</html>
