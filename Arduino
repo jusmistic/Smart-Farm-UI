@@ -1,0 +1,31 @@
+unsigned int EchoPin = 6;          //Echo Port Brown Line 6
+unsigned int TrigPin = 7;         //TrigPin Port Blue Line 7   
+unsigned long Time_Echo_us = 0;   //Time For Calculate Distant
+unsigned long Len_cm  = 0;        //Lenght From Ultrasonic In This situation it a raw_length
+unsigned int SoilPin = A5;         //SoilPin Violet line A5
+unsigned int Soil_Humidity = 0;   //Input Value from Soil Humidity
+void setup()
+{  //Initialize
+    Serial.begin(9600);                        //Serial: output result to Serial monitor
+    pinMode(EchoPin, INPUT);                    //Set EchoPin as input, to receive measure result from US-100
+    pinMode(TrigPin, OUTPUT);                   //Set TrigPin as output, used to send high pusle to trig measurement (>10us)
+    pinMode(SoilPin, INPUT);                    //Set SoilPin to Input
+}
+
+void loop()
+{
+    digitalWrite(TrigPin, HIGH);              //begin to send a high pulse, then US-100 begin to measure the distance
+    delayMicroseconds(50);                    //set this high pulse width as 50us (>10us)
+    digitalWrite(TrigPin, LOW);               //end this high pulse
+    
+    Time_Echo_us = pulseIn(EchoPin, HIGH);               //calculate the pulse width at EchoPin, 
+    if((Time_Echo_us < 60000) && (Time_Echo_us > 1))     //a valid pulse width should be between (1, 60000).
+    {
+      Len_cm = (Time_Echo_us*34/1000)/2;      //calculate the distance by pulse width, Len_mm = (Time_Echo_us * 0.34mm/us) / 2 (mm)
+    }
+    Soil_Humidity = analogRead(SoilPin);
+      Serial.print(Len_cm);
+      Serial.print(",");
+      Serial.println(Soil_Humidity);
+      delay(500);
+}
